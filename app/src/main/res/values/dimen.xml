@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="listItemHeight">80dp</dimen>
+    <dimen name="listItemMainPadding">8dp</dimen>
+    <dimen name="listItemSecondaryPadding">16dp</dimen>
+
+    <dimen name="listItemSecondaryTextSize">12sp</dimen>
+    <dimen name="listItemSectionTextSize">14sp</dimen>
+    <dimen name="listItemheadingTextSize">16sp</dimen>
+    <dimen name="noNewsFoundTextSize">28sp</dimen>
+</resources>
