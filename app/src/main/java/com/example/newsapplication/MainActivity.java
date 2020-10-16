@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         progressBar = findViewById(R.id.progress_bar);
         emptyTextView = findViewById(R.id.empty);
 
-        ConnectivityManager CM = (ConnectivityManager)
-                getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager CM = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
         NetworkInfo NI = CM.getActiveNetworkInfo();
+
         if (NI != null && NI.isConnected()) {
             LoaderManager loaderManager = getLoaderManager();
             loaderManager.initLoader(0, null, this);
@@ -61,7 +61,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     @Override
-    public Loader<List<News>> onCreateLoader(int i, Bundle bundle) {
+    public Loader<List<News>> onCreateLoader(int i, Bundle bundle)
+    {
         Uri baseUri = Uri.parse(REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
         uriBuilder.appendQueryParameter("show-tags", "contributor");
@@ -70,7 +71,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     @Override
-    public void onLoadFinished(Loader<List<News>> loader, List<News> earthquakes) {
+    public void onLoadFinished(Loader<List<News>> loader, List<News> earthquakes)
+    {
         newsAdapter.clear();
         progressBar.setVisibility(View.GONE);
         emptyTextView.setText("No News found");
