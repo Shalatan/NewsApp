@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         if (NI != null && NI.isConnected()) {
             LoaderManager loaderManager = getLoaderManager();
             loaderManager.initLoader(0, null, this);
-        } else {
+        }
+        else {
             progressBar.setVisibility(View.GONE);
             emptyTextView.setText("No Internet Connection");
         }
